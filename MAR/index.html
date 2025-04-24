@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <h2>Certificate Generator</h2>
+  <form id="certForm">
+    <input type="number" id="serial" placeholder="Activity Serial Number" required />
+    <input type="text" id="activity" placeholder="Activity Name" required />
+    <input type="date" id="activityDate" required />
+    <input type="number" id="points" placeholder="Activity Points" required />
+    <input type="text" id="studentName" placeholder="Student Name" required />
+    <input type="text" id="roll" placeholder="University Roll Number" required />
+    <input type="text" id="dept" placeholder="Department" required />
+    <input type="text" id="year" placeholder="Year" required />
+    <input type="text" id="semester" placeholder="Semester" required />
+    <input type="text" id="links" placeholder="Links (optional)" />
+
+    <label>Certificate Image:</label>
+    <input type="file" id="bgImage" accept="image/*" required />
+
+    <label>Signature Image:</label>
+    <input type="file" id="signatureImage" accept="image/*" required />
+
+    <button type="button" onclick="generatePDF()">Generate Certificate</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
