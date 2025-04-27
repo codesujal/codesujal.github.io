@@ -2,34 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Certificate Generator</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAR Certificate Generator</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif, serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #certificateForm {
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: white;
+    }
+
+    input[type="text"], input[type="date"], input[type="file"] {
+      width: 100%;
+      padding: 0.8em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    button {
+      width: 100%;
+      padding: 1em;
+      font-size: 1.2em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 768px) {
+      #certificateForm {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <h2>Certificate Generator</h2>
-  <form id="certForm">
-    <input type="number" id="serial" placeholder="Activity Serial Number" required />
-    <input type="text" id="activity" placeholder="Activity Name" required />
-    <input type="date" id="activityDate" required />
-    <input type="number" id="points" placeholder="Activity Points" required />
-    <input type="text" id="studentName" placeholder="Student Name" required />
-    <input type="text" id="roll" placeholder="University Roll Number" required />
-    <input type="text" id="dept" placeholder="Department" required />
-    <input type="text" id="year" placeholder="Year" required />
-    <input type="text" id="semester" placeholder="Semester" required />
-    <input type="text" id="links" placeholder="Links (optional)" />
+  <h2>MAR Certificate Generator</h2>
+  <form id="certificateForm">
+    <input type="text" id="serial" name="serial" placeholder="Activity Serial Number"><br>
+    <input type="text" id="activity" name="activity" placeholder="Activity Name"><br>
+    <input type="date" id="activityDate" name="activityDate"><br>
+    <input type="text" id="points" name="points" placeholder="Activity Points"><br>
+    <input type="text" id="studentName" name="studentName" placeholder="Student Name"><br>
+    <input type="text" id="roll" name="roll" placeholder="University Roll Number"><br>
+    <input type="text" id="dept" name="dept" placeholder="Department"><br>
+    <input type="text" id="year" name="year" placeholder="Year"><br>
+    <input type="text" id="semester" name="semester" placeholder="Semester"><br>
+    <input type="text" id="links" name="links" placeholder="Links (if any)"><br>
 
-    <label>Certificate Image:</label>
-    <input type="file" id="bgImage" accept="image/*" required />
+    <input type="file" id="bgImage" name="bgImage"><br>
+    <input type="file" id="signatureImage" name="signatureImage"><br>
 
-    <label>Signature Image:</label>
-    <input type="file" id="signatureImage" accept="image/*" required />
-
-    <button type="button" onclick="generatePDF()">Generate Certificate</button>
+    <button type="button" onclick="generatePDF()">Generate PDF</button>
   </form>
 
+  <div style="font-size: 0.8em; color: #555; margin-top: 20px; margin-bottom: 20px; text-align: center;">
+    ©️CodeSujal 2025 | Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
