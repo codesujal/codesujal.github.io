@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .button {
+      display: inline-block;
+      width: 90%;
+      margin: 15px auto;
+      padding: 18px;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #333;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 25px 15px;
+        margin: 30px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Choose</h2>
+    <a href="/MAR/" class="button">Go to MAR Certificate Generator</a>
+    <a href="/FYA/" class="button">Go to FindYourAssignment (Grp Y)</a>
+  </div>
+  <div class="footer">
+    ©️ CodeSujal 2025 | Licensed under 
+    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
+  </div>
+</body>
+</html>
