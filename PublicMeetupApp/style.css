@@ -1,0 +1,254 @@
+:root {
+    --bg-primary: white;
+    --bg-secondary: black;
+    --text-primary: white;
+    --text-secondary: black;
+    --brand-color: #FB6F92;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-image: url("/PublicMeetupApp/img/background-noise.webp");
+    background-size: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 30px;
+
+    backdrop-filter: blur(1px);
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li span {
+    font-size: x-large;
+    font-weight: bold;
+    color: var(--brand-color);
+}
+
+nav ul li input {
+    height: 35px;
+    width: 35vw;
+    padding: 20px;
+    border-radius: 100px;
+
+    color: rgba(0, 0, 0, 0.4);
+    border: none;
+    box-shadow: 0px 4px 15px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li img {
+    height: 50px;
+    margin-right: 5px;
+}
+
+nav ul li button {
+    border: none;
+    border-radius: 100px;
+    height: 45px;
+    width: 125px;
+    margin-left: 5px;
+}
+
+#sbar{
+    position: relative;
+}
+
+#sbar i{
+    position: absolute;
+    right: 20px;
+    top: 13px;
+
+    height: 30px;
+
+    color: var(--text-secondary);
+}
+
+#login {
+    color: var(--text-secondary);
+    font-weight: bold;
+    background: none;
+}
+
+#signup {
+    color: var(--text-primary);
+    font-weight: bold;
+    background-color: var(--bg-secondary);
+    box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+#login:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+#signup:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Top Banner */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Photo1 Quotes Photo2";
+
+    padding: 40px 40px 0px 40px;
+}
+
+.Photo1 {
+    grid-area: Photo1;
+}
+
+.Quotes {
+    grid-area: Quotes;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+
+    color: rgb(70, 70, 70);
+}
+
+.Photo2 {
+    grid-area: Photo2;
+}
+
+span{
+    margin-top: 10px;
+}
+
+.big{
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+.small{
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: rgb(149, 149, 149);
+}
+
+#joinus{
+    border: none;
+    border-radius: 100px;
+    height: 45px;
+    width: 125px;
+    margin-left: 5px;
+    margin-top: 15px;
+
+    color: var(--text-primary);
+    font-weight: bold;
+    background-color: var(--bg-secondary);
+    box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+#joinus:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards Section */
+section{
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    overflow-x: auto;
+}
+
+section article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 300px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+
+    border-radius: 12px;
+}
+
+section article img{
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 300px;
+
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+section article img:hover{
+    cursor: pointer;
+    box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.heading{
+    padding-left: 40px;
+    margin-top: 20px;
+}
+
+span{
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+#brand-clr{
+    color: var(--brand-color);
+}
+
+#arrow{
+    padding-left: 20px;
+    height: 70px;
+}
+
+/* Footer Section */
+footer{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 100px;
+    margin: 30px;
+
+    background-color: var(--bg-secondary);
+}
+
+footer p{
+    color: var(--text-primary);
+    font-size: xx-large;
+}
+
+footer hr{
+    color: white;
+    margin-top: 10px;
+    width: 400px;
+}
